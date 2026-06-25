@@ -498,6 +498,75 @@ a:focus-visible {
   line-height: 2;
 }
 
+.resume-summary {
+  max-width: 900px;
+  margin-top: 48px;
+  border: 1px solid var(--color-foreground);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.resume-summary summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 64px;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.resume-summary summary::-webkit-details-marker {
+  display: none;
+}
+
+.resume-summary-state {
+  white-space: nowrap;
+}
+
+.resume-summary-state-open,
+.resume-summary[open] .resume-summary-state-closed {
+  display: none;
+}
+
+.resume-summary[open] .resume-summary-state-open {
+  display: inline;
+}
+
+.resume-summary-list {
+  display: grid;
+  gap: 1px;
+  border-top: 1px solid var(--color-foreground);
+  background: var(--color-foreground);
+}
+
+.resume-summary-item {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  padding: 22px;
+  background: var(--color-background);
+}
+
+.resume-summary-item h3 {
+  margin: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.resume-summary-item p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1049,6 +1118,20 @@ a:focus-visible {
   .lead-copy {
     font-size: 1.35rem;
     line-height: 2;
+  }
+
+  .resume-summary {
+    margin-top: 36px;
+  }
+
+  .resume-summary summary {
+    padding: 16px;
+  }
+
+  .resume-summary-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 18px;
   }
 
   .stat-item {

@@ -28,6 +28,36 @@ const profile = {
     aboutTitle: '关于我',
     aboutText:
       '我是一名 AI Agent 产品经理，关注智能体如何进入真实业务场景。熟悉意图识别、槽位提取、任务拆解、工具调用、短期记忆与上下文管理，也擅长专业知识库建设、文档治理、元数据设计、知识检索、来源追溯和内容审核流程。',
+    resumeSummaryTitle: '个人总结',
+    resumeSummaryClosed: '展开',
+    resumeSummaryOpen: '收起',
+    resumeSummary: [
+      {
+        title: 'AI Agent 产品经验',
+        body:
+          '具备约 2 年以上 AI 产品与需求验证经验，主导或参与建筑设计、安全巡检等垂直行业 Agent 产品建设，能够从业务痛点出发拆解场景、设计能力边界、推动 MVP 验证和上线迭代。',
+      },
+      {
+        title: '垂直知识工程能力',
+        body:
+          '熟悉专业知识库建设、文档治理、元数据设计、知识检索、来源追溯和内容审核流程，能将专家经验和行业规范转化为 AI 可检索、可评估、可持续运营的数据资产。',
+      },
+      {
+        title: 'Agent 能力设计',
+        body:
+          '理解大模型能力边界，熟悉意图识别、槽位提取、任务拆解、工具调用、短期记忆和上下文管理等 Agent 产品模块，能把技术能力转化为用户可感知的稳定工作流。',
+      },
+      {
+        title: '敏捷交付能力',
+        body:
+          '具备基于 Vibe Coding / Coding Agent（Codex/Claude Code/Cursor）的快速原型落地能力，能够将中等复杂需求拆解为可执行任务，完成 POC / MVP 级代码实现、调试验证与迭代优化。',
+      },
+      {
+        title: '评测与闭环意识',
+        body:
+          '建立以 North Star Metrics 为核心的指标体系，搭建过金标数据评测集、人机协作评测、Badcase 回流机制，关注召回、准确率、幻觉率、工具调用成功率、自助率等指标。',
+      },
+    ],
     experienceTitle: '经历',
     experiences: [
       {
@@ -219,6 +249,36 @@ const profile = {
     aboutTitle: 'About',
     aboutText:
       'I design AI Agent products for real business scenarios. My work spans intent recognition, slot extraction, task decomposition, tool calling, short-term memory, context management, knowledge base governance, metadata design, retrieval, source tracing, and evaluation loops.',
+    resumeSummaryTitle: 'Personal Summary',
+    resumeSummaryClosed: 'Open',
+    resumeSummaryOpen: 'Close',
+    resumeSummary: [
+      {
+        title: 'AI Agent Product Experience',
+        body:
+          'I have about 2+ years of AI product and requirement validation experience, leading or contributing to vertical Agent products in architecture design and safety inspection, from pain-point discovery to MVP validation and launch iteration.',
+      },
+      {
+        title: 'Vertical Knowledge Engineering',
+        body:
+          'I am familiar with knowledge base construction, document governance, metadata design, retrieval, source tracing, and content review, turning expert experience and industry standards into searchable, evaluable, and operable AI data assets.',
+      },
+      {
+        title: 'Agent Capability Design',
+        body:
+          'I understand LLM capability boundaries and design modules such as intent recognition, slot extraction, task decomposition, tool calling, short-term memory, and context management as stable user-facing workflows.',
+      },
+      {
+        title: 'Agile Delivery',
+        body:
+          'I can use Vibe Coding / Coding Agent workflows with Codex, Claude Code, and Cursor to break medium-complexity requirements into executable tasks and deliver POC / MVP-level prototypes, debugging, validation, and iteration.',
+      },
+      {
+        title: 'Evaluation And Closed Loops',
+        body:
+          'I build metric systems around North Star Metrics, including golden evaluation sets, human-AI review, and Badcase feedback loops, with attention to recall, accuracy, hallucination rate, tool-call success, and self-service rate.',
+      },
+    ],
     experienceTitle: 'Experience',
     experiences: [
       {
@@ -504,6 +564,23 @@ export default function App() {
             <SectionHeader index="01" title={content.aboutTitle} />
             <div className="section-body">
               <p className="lead-copy">{content.aboutText}</p>
+              <details className="resume-summary">
+                <summary>
+                  <span>{content.resumeSummaryTitle}</span>
+                  <span className="resume-summary-state resume-summary-state-closed">
+                    {content.resumeSummaryClosed}
+                  </span>
+                  <span className="resume-summary-state resume-summary-state-open">{content.resumeSummaryOpen}</span>
+                </summary>
+                <div className="resume-summary-list">
+                  {content.resumeSummary.map((item) => (
+                    <article className="resume-summary-item" key={item.title}>
+                      <h3>{item.title}</h3>
+                      <p>{item.body}</p>
+                    </article>
+                  ))}
+                </div>
+              </details>
               <div className="stat-grid" aria-label={content.aboutTitle}>
                 {content.stats.map((item) => (
                   <article className="stat-item" key={item.label}>
