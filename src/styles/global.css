@@ -605,24 +605,44 @@ a:focus-visible {
 }
 
 .timeline-item {
-  display: grid;
-  grid-template-columns: 180px minmax(220px, 0.75fr) minmax(0, 1fr);
-  gap: 32px;
-  align-items: baseline;
-  padding: 30px 0;
   border-bottom: 1px solid var(--color-foreground);
 }
 
-.timeline-item time {
+.timeline-summary {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  padding: 30px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.timeline-summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-item[open] .timeline-summary {
+  border-bottom: 1px solid var(--color-foreground);
+}
+
+.timeline-item time,
+.timeline-expand-label {
   color: var(--color-muted);
 }
 
 .timeline-item h3 {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.12;
+}
+
+.timeline-summary-main {
+  display: grid;
+  gap: 14px;
+  max-width: 880px;
 }
 
 .timeline-item p {
@@ -632,30 +652,117 @@ a:focus-visible {
   line-height: 1.65;
 }
 
+.timeline-role {
+  color: var(--color-foreground);
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.timeline-description {
+  max-width: 760px;
+}
+
+.timeline-expand-label {
+  width: fit-content;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.timeline-project-panel {
+  padding: 30px 0 34px;
+}
+
+.project-experience-card {
+  padding: 28px;
+  background: var(--color-background);
+}
+
+.project-experience-content {
+  display: grid;
+  min-width: 0;
+  gap: 26px;
+}
+
+.project-experience-group {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-foreground);
+}
+
+.project-experience-group:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.project-experience-group h4 {
+  margin: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.45;
+}
+
+.project-experience-group ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .work-card {
-  display: grid;
   width: 100%;
-  min-height: 330px;
   padding: 0;
   border: 1px solid var(--color-foreground);
   background: var(--color-background);
   color: var(--color-foreground);
   text-align: left;
+}
+
+.work-card-summary {
+  display: grid;
+  min-height: 300px;
+  cursor: pointer;
+  list-style: none;
   transition:
     background-color 100ms linear,
     color 100ms linear;
 }
 
-.work-card:hover,
-.work-card:focus-visible {
+.work-card-summary::-webkit-details-marker {
+  display: none;
+}
+
+.work-card-summary:hover,
+.work-card-summary:focus-visible {
   background: var(--color-foreground);
   color: var(--color-background);
+}
+
+.work-card[open] .work-card-summary {
+  border-bottom: 1px solid var(--color-foreground);
+}
+
+.work-card-main {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr);
+  gap: 44px;
+  align-items: start;
+  padding: 48px 24px 0;
 }
 
 .work-card-meta {
@@ -668,10 +775,8 @@ a:focus-visible {
 }
 
 .work-card h3 {
-  align-self: end;
   margin: 0;
-  padding: 44px 24px 0;
-  font-family: var(--font-display);
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
@@ -680,7 +785,6 @@ a:focus-visible {
 .work-card p {
   max-width: 520px;
   margin: 0;
-  padding: 20px 24px 0;
   color: inherit;
   font-size: 1.05rem;
   line-height: 1.62;
@@ -694,6 +798,41 @@ a:focus-visible {
   font-weight: 700;
   line-height: 1.4;
   text-transform: uppercase;
+}
+
+.work-card-detail {
+  display: grid;
+  gap: 1px;
+  background: var(--color-foreground);
+}
+
+.work-card-detail-section {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 28px;
+  padding: 26px;
+  background: var(--color-background);
+}
+
+.work-card-detail-section h4 {
+  margin: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+.work-card-detail-section p,
+.work-card-detail-section ul {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.work-card-detail-section ul {
+  display: grid;
+  gap: 10px;
+  padding-left: 1.2em;
 }
 
 .work-modal-backdrop {
@@ -860,6 +999,49 @@ a:focus-visible {
   background: transparent;
 }
 
+.skill-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid currentColor;
+  background: currentColor;
+}
+
+.skill-group {
+  min-width: 0;
+  min-height: 238px;
+  padding: 24px;
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+.skill-group h3 {
+  margin: 0 0 26px;
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.skill-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-group li {
+  min-height: 36px;
+  padding: 9px 10px;
+  border: 1px solid currentColor;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .contact-section {
   background: var(--color-background);
 }
@@ -1016,12 +1198,12 @@ a:focus-visible {
     min-height: 520px;
   }
 
-  .timeline-item {
+  .timeline-summary {
     grid-template-columns: 150px minmax(0, 1fr);
   }
 
-  .timeline-item p {
-    grid-column: 2;
+  .project-experience-group {
+    grid-template-columns: 1fr;
   }
 
   .contact-headline {
@@ -1143,22 +1325,50 @@ a:focus-visible {
     font-size: 2.6rem;
   }
 
-  .timeline-item {
+  .timeline-summary {
     grid-template-columns: 1fr;
     gap: 12px;
     padding: 26px 0;
-  }
-
-  .timeline-item p {
-    grid-column: auto;
   }
 
   .timeline-item h3 {
     font-size: 1.8rem;
   }
 
-  .work-card {
+  .timeline-role {
+    font-size: 1.3rem;
+  }
+
+  .timeline-project-panel {
+    padding: 24px 0 28px;
+  }
+
+  .project-experience-card {
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .project-experience-group {
+    gap: 12px;
+  }
+
+  .skill-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-group {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .work-card-summary {
     min-height: 260px;
+  }
+
+  .work-card-main {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 34px 20px 0;
   }
 
   .work-card h3 {
@@ -1190,6 +1400,12 @@ a:focus-visible {
     grid-template-columns: 1fr;
     gap: 12px;
     padding: 22px 0;
+  }
+
+  .work-card-detail-section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 22px;
   }
 
   .contact-headline {

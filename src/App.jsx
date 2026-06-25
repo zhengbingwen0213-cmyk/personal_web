@@ -73,7 +73,83 @@ const profile = {
           '主导内部建筑设计助手 Agent 从 0 到 1，覆盖需求验证、产品规划、知识库治理、智能问答、文案生成、工具调用、效果评测与上线迭代，推动多个内部场景快速 POC。',
       },
     ],
-    workTitle: '项目与作品',
+    projectExperienceTitle: '工作经历',
+    projectExperienceClosed: '展开工作经历',
+    projectExperienceOpen: '收起工作经历',
+    projectExperiences: [
+      {
+        title: '宇泛智能科技股份有限公司｜AI Agent 产品经理',
+        period: '2026.04 - 至今',
+        positioning:
+          '围绕园区、工地等施工场景的安全隐患巡检 Agent，负责评测体系、样本治理、Badcase 归因、知识问答与短期记忆等能力建设。',
+        groups: [
+          {
+            title: '安全巡检 Agent 评测',
+            items: [
+              '围绕面向园区、工地等施工场景的安全隐患巡检 Agent，梳理多来源识别结果口径。',
+              '设计 Agent 节点指标与端到端指标，构建评测体系并推动自动化评测平台建设。',
+              '主导评测集按照不同场景、不同用途进行体系化构建。',
+            ],
+          },
+          {
+            title: '样本治理与 Badcase 归因',
+            items: [
+              '主导图集样本管理平台建设，推进真实样本接入。',
+              '支持人工标注复核、样本排除、图集管理、标签管理等功能。',
+              '推动样本沉淀、人工复核与 Badcase 归因进入持续优化链路。',
+            ],
+          },
+          {
+            title: '知识问答与记忆机制',
+            items: [
+              '参与安全施工知识库、短期记忆能力设计。',
+              '主导隐患问答建设，支持巡检人员围绕隐患定义、整改建议、误判原因和复核依据进行查询。',
+              '围绕巡检上下文保留当前任务、隐患类型与复核信息，辅助连续追问和现场判断。',
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Office for Metropolitan Architecture｜AI 产品经理',
+        period: '2023.10 - 2026.01',
+        positioning:
+          '主导内部建筑设计助手 Agent 建设，覆盖需求验证、产品规划、知识库治理、智能问答、文案生成、工具调用、效果评测与上线迭代。',
+        groups: [
+          {
+            title: 'AI Agent 产品从 0 到 1',
+            items: [
+              '主导内部建筑设计助手 Agent 建设。',
+              '覆盖需求验证、产品规划、知识库治理、智能问答、文案生成、工具调用、效果评测与上线迭代。',
+            ],
+          },
+          {
+            title: '需求验证与场景立项',
+            items: [
+              '访谈 50+ 名资深设计师与管理层。',
+              '归纳传统规范检索、设计说明撰写和合规校验痛点。',
+              '完成 AI 替代可行性分析和本地化部署立项。',
+            ],
+          },
+          {
+            title: '知识工程与评测闭环',
+            items: [
+              '治理 4000+ 份建筑规范、设计文档和历史方案资料。',
+              '沉淀 1000+ 条评测集。',
+              '建立“人工评审 + 模型辅助评测”的质量评估机制。',
+            ],
+          },
+          {
+            title: '跨场景复用',
+            items: [
+              '推动知识库、检索链路、Prompt 模板和 Agent 编排能力模块化。',
+              '支持财务、法律、行政培训等内部场景快速验证。',
+              '将新业务 POC 周期从约 2 个月缩短至 2 周。',
+            ],
+          },
+        ],
+      },
+    ],
+    workTitle: '项目',
     works: [
       {
         title: '安全巡检 Agent',
@@ -214,6 +290,24 @@ const profile = {
       '用户访谈',
       'Roadmap',
     ],
+    skillGroups: [
+      {
+        title: 'AI Agent 产品',
+        items: ['场景拆解', '意图体系', '槽位设计', '任务链编排', '工具调用', '记忆机制', 'Harness Engineering'],
+      },
+      {
+        title: 'RAG 与知识库',
+        items: ['知识抽取', '文档治理', '语义分块', '元数据与标签体系', '混合检索', '重排序', '来源追溯', '内容审核'],
+      },
+      {
+        title: '评测与数据闭环',
+        items: ['评测集构建', '评测体系设计', 'Badcase 归因'],
+      },
+      {
+        title: '产品与协作',
+        items: ['PRD', '原型设计', '用户访谈', '需求优先级', 'Roadmap', '跨部门协同'],
+      },
+    ],
     contactTitle: '联系',
     contactHeadline: '一起把复杂的 AI 能力做成清晰、可用、可验证的产品体验。',
     contactText: '欢迎通过电话、微信或邮箱联系我。',
@@ -294,7 +388,83 @@ const profile = {
           'Led an internal architecture design assistant Agent from 0 to 1, covering requirement validation, product planning, knowledge base governance, intelligent Q&A, copy generation, tool calling, evaluation, launch, and iteration.',
       },
     ],
-    workTitle: 'Projects & Writing',
+    projectExperienceTitle: 'Work Experience',
+    projectExperienceClosed: 'Open Work Details',
+    projectExperienceOpen: 'Close Work Details',
+    projectExperiences: [
+      {
+        title: 'Uniview Smart Technology｜AI Agent Product Manager',
+        period: '2026.04 - Present',
+        positioning:
+          'Worked on safety inspection Agent products for industrial parks and construction scenarios, spanning evaluation, sample governance, Badcase attribution, hazard Q&A, and short-term memory.',
+        groups: [
+          {
+            title: 'Safety Inspection Agent Evaluation',
+            items: [
+              'Clarified result definitions across multiple recognition sources for safety hazard inspection Agent workflows.',
+              'Designed Agent node metrics and end-to-end metrics, built the evaluation framework, and pushed automated evaluation platform development.',
+              'Led evaluation set construction by scenario and usage type.',
+            ],
+          },
+          {
+            title: 'Sample Governance And Badcase Attribution',
+            items: [
+              'Led gallery sample management platform construction and promoted real sample ingestion.',
+              'Supported manual annotation review, sample exclusion, gallery management, and tag management features.',
+              'Connected sample accumulation, manual review, and Badcase attribution into the optimization loop.',
+            ],
+          },
+          {
+            title: 'Knowledge Q&A And Memory',
+            items: [
+              'Contributed to safety construction knowledge base and short-term memory design.',
+              'Led hazard Q&A capability construction so inspectors can query hazard definitions, remediation advice, false-positive reasons, and review evidence.',
+              'Preserved task, hazard type, and review context to support follow-up questions and on-site judgment.',
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Office for Metropolitan Architecture｜AI Product Manager',
+        period: '2023.10 - 2026.01',
+        positioning:
+          'Led an internal architecture design assistant Agent from 0 to 1, covering validation, planning, knowledge governance, Q&A, writing, tool calling, evaluation, launch, and iteration.',
+        groups: [
+          {
+            title: 'AI Agent Product From 0 To 1',
+            items: [
+              'Led the internal architecture design assistant Agent initiative.',
+              'Covered requirement validation, product planning, knowledge governance, intelligent Q&A, copy generation, tool calling, evaluation, launch, and iteration.',
+            ],
+          },
+          {
+            title: 'Requirement Validation And Scenario Initiation',
+            items: [
+              'Interviewed 50+ senior designers and managers.',
+              'Identified pain points in traditional specification retrieval, design-description writing, and compliance checking.',
+              'Completed AI replacement feasibility analysis and local deployment initiation.',
+            ],
+          },
+          {
+            title: 'Knowledge Engineering And Evaluation Loop',
+            items: [
+              'Governed 4000+ architecture specifications, design documents, and historical proposal materials.',
+              'Created 1000+ evaluation cases.',
+              'Established a quality evaluation mechanism combining human review and model-assisted evaluation.',
+            ],
+          },
+          {
+            title: 'Cross-scenario Reuse',
+            items: [
+              'Modularized knowledge base, retrieval chain, Prompt templates, and Agent orchestration capabilities.',
+              'Supported quick validation for internal finance, legal, and administrative training scenarios.',
+              'Reduced new-business POC cycles from about 2 months to 2 weeks.',
+            ],
+          },
+        ],
+      },
+    ],
+    workTitle: 'Projects',
     works: [
       {
         title: 'Safety Inspection Agent',
@@ -380,6 +550,24 @@ const profile = {
       'PRD',
       'User Interview',
       'Roadmap',
+    ],
+    skillGroups: [
+      {
+        title: 'AI Agent Product',
+        items: ['Scenario Decomposition', 'Intent System', 'Slot Design', 'Task Orchestration', 'Tool Calling', 'Memory Mechanism', 'Harness Engineering'],
+      },
+      {
+        title: 'RAG And Knowledge Base',
+        items: ['Knowledge Extraction', 'Document Governance', 'Semantic Chunking', 'Metadata And Tags', 'Hybrid Retrieval', 'Reranking', 'Source Tracing', 'Content Review'],
+      },
+      {
+        title: 'Evaluation And Data Loop',
+        items: ['Evaluation Set Construction', 'Evaluation System Design', 'Badcase Attribution'],
+      },
+      {
+        title: 'Product And Collaboration',
+        items: ['PRD', 'Prototype Design', 'User Interviews', 'Requirement Priority', 'Roadmap', 'Cross-functional Collaboration'],
+      },
     ],
     contactTitle: 'Contact',
     contactHeadline: 'Let us turn complex AI capability into clear, useful, and measurable product experience.',
@@ -597,13 +785,61 @@ export default function App() {
           <div className="section-inner">
             <SectionHeader index="02" title={content.experienceTitle} />
             <div className="timeline">
-              {content.experiences.map((item) => (
-                <article className="timeline-item" key={`${item.period}-${item.title}`}>
-                  <time>{item.period}</time>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </article>
-              ))}
+              {content.experiences.map((item, index) => {
+                const workDetail = content.projectExperiences[index];
+                const [companyName, roleName] = item.title.split('｜');
+
+                return (
+                  <details className="timeline-item timeline-item-expandable" key={`${item.period}-${item.title}`}>
+                    <summary className="timeline-summary">
+                      <time>{item.period}</time>
+                      <div className="timeline-summary-main">
+                        <h3>{companyName || item.title}</h3>
+                        {roleName ? <p className="timeline-role">{roleName}</p> : null}
+                        <p className="timeline-description">{item.description}</p>
+                        {workDetail ? (
+                          <span className="timeline-expand-label">
+                            <span className="resume-summary-state resume-summary-state-closed">
+                              {content.projectExperienceClosed}
+                            </span>
+                            <span className="resume-summary-state resume-summary-state-open">
+                              {content.projectExperienceOpen}
+                            </span>
+                          </span>
+                        ) : null}
+                      </div>
+                    </summary>
+                    {workDetail ? (
+                      <div className="timeline-project-panel">
+                        <article className="project-experience-card" key={`${workDetail.title}-${workDetail.period}`}>
+                          <div className="project-experience-content">
+                            {workDetail.groups.map((group) => (
+                              <section className="project-experience-group" key={`${workDetail.title}-${group.title}`}>
+                                <h4>{group.title}</h4>
+                                <ul>
+                                  {group.items.map((item) => (
+                                    <li key={item}>{item}</li>
+                                  ))}
+                                </ul>
+                              </section>
+                            ))}
+                            {workDetail.outcomes?.length ? (
+                              <section className="project-experience-group project-experience-outcomes">
+                                <h4>{language === 'zh' ? '项目成果' : 'Outcomes'}</h4>
+                                <ul>
+                                  {workDetail.outcomes.map((item) => (
+                                    <li key={item}>{item}</li>
+                                  ))}
+                                </ul>
+                              </section>
+                            ) : null}
+                          </div>
+                        </article>
+                      </div>
+                    ) : null}
+                  </details>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -613,20 +849,39 @@ export default function App() {
             <SectionHeader index="03" title={content.workTitle} />
             <div className="work-grid">
               {content.works.map((item) => (
-                <button
-                  className="work-card"
-                  type="button"
-                  key={`${item.type}-${item.title}`}
-                  onClick={() => setSelectedWork(item)}
-                >
-                  <div className="work-card-meta">
-                    <span>{item.type}</span>
-                    <span>{item.period}</span>
+                <details className="work-card" key={`${item.type}-${item.title}`}>
+                  <summary className="work-card-summary">
+                    <div className="work-card-meta">
+                      <span>{item.type}</span>
+                      <span>{item.period}</span>
+                    </div>
+                    <div className="work-card-main">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                    <span className="work-card-action">
+                      <span className="resume-summary-state resume-summary-state-closed">{item.detailLabel}</span>
+                      <span className="resume-summary-state resume-summary-state-open">
+                        {language === 'zh' ? '收起项目经历' : 'Close project'}
+                      </span>
+                    </span>
+                  </summary>
+                  <div className="work-card-detail">
+                    {item.details.map((section) => (
+                      <section className="work-card-detail-section" key={`${item.title}-${section.title}`}>
+                        <h4>{section.title}</h4>
+                        {section.body ? <p>{section.body}</p> : null}
+                        {section.items ? (
+                          <ul>
+                            {section.items.map((detail) => (
+                              <li key={detail}>{detail}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </section>
+                    ))}
                   </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <span className="work-card-action">{item.detailLabel}</span>
-                </button>
+                </details>
               ))}
             </div>
           </div>
@@ -635,11 +890,18 @@ export default function App() {
         <section className="page-section skills-section" id="skills">
           <div className="section-inner editorial-grid">
             <SectionHeader index="04" title={content.skillsTitle} inverted />
-            <ul className="skill-list">
-              {content.skills.map((skill) => (
-                <li key={skill}>{skill}</li>
+            <div className="skill-group-grid">
+              {content.skillGroups.map((group) => (
+                <article className="skill-group" key={group.title}>
+                  <h3>{group.title}</h3>
+                  <ul>
+                    {group.items.map((skill) => (
+                      <li key={skill}>{skill}</li>
+                    ))}
+                  </ul>
+                </article>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
